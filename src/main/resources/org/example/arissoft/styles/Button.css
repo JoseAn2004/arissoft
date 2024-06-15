@@ -1,0 +1,83 @@
+#btn_agregarini,#btnguardaropera,#btnagregarclientes,#btnagregargasto{
+    -fx-background-color: linear-gradient(#f0ff35, #5eff00);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: #654b00;
+    /*-fx-font-weight: bold;
+        -fx-font-size: 14px;*/
+    -fx-padding: 10 20 10 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+}
+
+#btn_agregarini:hover,#btnguardaropera:hover,#btnagregarclientes:hover ,#btnagregargasto:hover{
+    -fx-background-color: linear-gradient(#5eff00, #f0ff35);
+}
+
+#btn_agregarini:pressed,#btnguardaropera:pressed,#btnagregarclientes:pressed,#btnagregargasto:pressed{
+    -fx-background-color: linear-gradient(#84ff00, #f0ff35);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#btnseleccionaropera ,#btn_select_ini,#btnseleccionarmaquinarias,#btnseleccionarclientes,#btnseleccionargasto{
+    -fx-background-color: linear-gradient(#ff9100, #fffc35);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: #654b00;
+    /*-fx-font-weight: bold;
+        -fx-font-size: 14px;*/
+    -fx-padding: 10 20 10 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+}
+
+#btnseleccionaropera:hover ,#btn_select_ini:hover,#btnseleccionarmaquinarias:hover, #btnseleccionarclientes:hover,#btnseleccionargasto:hover{
+    -fx-background-color: linear-gradient(#fffc35, #ff9100);
+}
+
+#btnseleccionaropera:pressed, #btn_select_ini:pressed,#btnseleccionarmaquinarias:pressed, #btnseleccionarclientes:pressed,#btnseleccionargasto:pressed{
+    -fx-background-color: linear-gradient(#ff9100, #fffc35);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 0);
+}
+
+
+
+
+
+
+
+
+#btnmodificaropera ,#btn_modificar_ini, #btneditarmaquinarias, #btnmodificarclientes,#btneditargasto{
+    -fx-background-color: linear-gradient(rgb(0, 186, 255), #fffef3);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: #654b00;
+    /*-fx-font-weight: bold;
+        -fx-font-size: 14px;*/
+    -fx-padding: 10 20 10 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+}
+
+#btnmodificaropera:hover,#btn_modificar_ini:hover , #btneditarmaquinarias:hover ,#btnmodificarclientes:hover,#btneditargasto{
+    -fx-background-color: linear-gradient(#fffef3, rgb(0, 186, 255));
+}
+
+#btnmodificaropera:pressed ,#btn_modificar_ini:pressed , #btneditarmaquinarias:pressed ,#btnmodificarclientes:pressed,#btneditargasto:pressed{
+    -fx-background-color: linear-gradient(rgb(0, 186, 255), #fffef3);
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 15, 0, 0, 0);
+}
+

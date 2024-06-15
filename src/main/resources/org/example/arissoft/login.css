@@ -1,0 +1,43 @@
+.label-mensaje-error {
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-text-fill: #000000;
+    -fx-background-color: transparent;
+}
+
+.txtusu {
+    -fx-background-color: rgba(255, 255, 255, 0.84);
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 2 0;
+    -fx-padding: 8px;
+    -fx-font-size: 12px;
+    -fx-text-fill: #222222;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-background-radius: 4px;
+    -fx-border-radius: 4px;
+    -fx-transition: background-color 0.3s, text-fill 0.3s;
+}
+
+.txtusu:hover {
+    -fx-text-fill: #000000;
+}
+
+.txtusu:focused {
+    -fx-border-color: #ffd43c;
+}
+
+.txtusu:focused:hover {
+    -fx-border-color: #fffb00;
+}
+
+.txtusu:disabled {
+    -fx-opacity: 0.5;
+}
+
+.boton-iniciar {
+    -fx-background-color: yellow;
+}
+
+.boton-iniciar:hover {
+    -fx-background-color: #deff06;
+}
