@@ -1,6 +1,9 @@
 package org.example.arissoft;
 
+<<<<<<< HEAD
 import SecondAplication.SecondAplication;
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -59,6 +62,7 @@ public class VerificationController {
         }
 
         try {
+<<<<<<< HEAD
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
             Parent root = loader.load();
 
@@ -71,6 +75,9 @@ public class VerificationController {
                 controller.setUsuario(nombreUsuario, apellidoUsuario);
             }
 
+=======
+            Parent root = FXMLLoader.load(getClass().getResource(fxmlFile));
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();

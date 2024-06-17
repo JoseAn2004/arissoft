@@ -89,6 +89,14 @@
                                  <Font name="Roboto Condensed" size="12.0" />
                              </font>
                          </Button>
+<<<<<<< HEAD
+=======
+                        <Button fx:id="btnusuario" maxHeight="0.0" maxWidth="145.0" minHeight="30.0" minWidth="0.0" mnemonicParsing="false" styleClass="custom-button" text="USUARIOS">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Button>
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
 
                          <Button fx:id="btngastos" maxWidth="145.0" minHeight="30.0" mnemonicParsing="false" onAction="#handleGastosButtonClick" styleClass="custom-button" text="GASTOS" textAlignment="CENTER">
                              <VBox.margin>
@@ -129,7 +137,11 @@
                               <DatePicker fx:id="txtfechainicio" layoutX="108.0" layoutY="95.0" maxWidth="180.0" minHeight="35.0" minWidth="180.0" promptText="Fecha Inicio" />
                               <DatePicker fx:id="txtfechatermino" layoutX="308.0" layoutY="95.0" maxWidth="180.0" minHeight="35.0" minWidth="180.0" promptText="Fecha Termino" />
                               <TextField fx:id="txthoras" editable="false" layoutX="308.0" layoutY="53.0" maxWidth="180.0" minHeight="35.0" minWidth="95.0" prefHeight="35.0" prefWidth="102.0" promptText="Costo por hora" />
+<<<<<<< HEAD
                                <TextField fx:id="txtdni" layoutX="107.0" layoutY="136.0" maxWidth="180.0" minHeight="35.0" minWidth="180.0" promptText="Ingresar Dni"/>
+=======
+                              <TextField fx:id="txtdni" layoutX="107.0" layoutY="136.0" maxWidth="180.0" minHeight="35.0" minWidth="180.0" promptText="Ingresar Dni" />
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
                               <TextField fx:id="txthoras_realizar" layoutX="500.0" layoutY="137.0" prefHeight="35.0" prefWidth="80.0" promptText="horas " />
                               <TextField fx:id="txtnombres" editable="false" layoutX="308.0" layoutY="137.0" maxWidth="180.0" minHeight="35.0" minWidth="180.0" promptText="Nombres" />
                               <ComboBox fx:id="txtelegirmaquinaria" layoutX="108.0" layoutY="52.0" minHeight="35.0" prefWidth="180.0" promptText="Elegir Maquinaria" />
@@ -138,7 +150,11 @@
                                     <Font name="Bookshelf Symbol 7" size="35.0" />
                                  </font></TextField>
                               <ComboBox fx:id="boxestadoini" layoutX="628.0" layoutY="52.0" prefHeight="35.0" prefWidth="180.0" promptText="Estado" />
+<<<<<<< HEAD
                               <ComboBox fx:id="txtoperador" editable="true" layoutX="430.0" layoutY="52.0" prefHeight="35.0" prefWidth="180.0" promptText="Operador" />
+=======
+                              <ComboBox fx:id="txtoperador" layoutX="430.0" layoutY="52.0" prefHeight="35.0" prefWidth="180.0" promptText="Operador" />
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
                               <TableView fx:id="tablainicio" layoutY="332.0" prefHeight="368.0" prefWidth="1086.0">
                                 <columns>
                                   <TableColumn fx:id="id_tabini" prefWidth="40.800018310546875" resizable="false" text="Nº" />
@@ -168,7 +184,11 @@
                                        </image>
                                     </ImageView>
                                  </graphic></Button>
+<<<<<<< HEAD
                               <Button fx:id="btn_select_ini" layoutX="343.0" layoutY="232.0" minHeight="35.0" minWidth="146.0" mnemonicParsing="false" onAction="#seleccionarregistro" prefHeight="39.0" text="Seleccionar" translateX="110.0">
+=======
+                              <Button fx:id="btn_select_ini" layoutX="343.0" layoutY="232.0" minHeight="35.0" minWidth="150.0" mnemonicParsing="false" onAction="#seleccionarregistro" text="Seleccionar" translateX="110.0">
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
                                  <graphic>
                                     <ImageView fitHeight="32.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
                                        <image>

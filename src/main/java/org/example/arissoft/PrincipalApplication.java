@@ -2,7 +2,10 @@ package org.example.arissoft;
 
 import conexion.ConexcionDB;
 import javafx.application.Application;
+<<<<<<< HEAD
 import javafx.css.converter.StringConverter;
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -15,6 +18,7 @@ import javax.swing.*;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.*;
+<<<<<<< HEAD
 import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -25,6 +29,11 @@ import javafx.util.converter.IntegerStringConverter;
 import javafx.util.converter.LocalDateStringConverter;
 
 import java.io.File;
+=======
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
 
 
 public class PrincipalApplication extends Application {
@@ -159,6 +168,11 @@ public class PrincipalApplication extends Application {
     }
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
     private void Cargaroperariosini() {
         Map<String, String> operariosMap = new HashMap<>();
         String sql = "SELECT ID_OPERARIOS, NOMBRES, APELLIDOS FROM OPERARIOS";
@@ -228,7 +242,11 @@ public class PrincipalApplication extends Application {
                 if (resultSet.next()) {
                     String nombre = resultSet.getString("NOMBRE");
                     String apellido = resultSet.getString("APELLIDO");
+<<<<<<< HEAD
                     txtnombres.setText(nombre +" "+ apellido);
+=======
+                    txtnombres.setText(nombre + " " + apellido);
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
                 } else {
                     txtnombres.setText("Cliente no encontrado");
                 }
@@ -317,7 +335,10 @@ public class PrincipalApplication extends Application {
     private void ingreso_nuevo_registro() {
         StringBuilder errores = new StringBuilder();
 
+<<<<<<< HEAD
         // Validación de campos
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
         String maquinaria = String.valueOf(txtelegirmaquinaria.getValue());
         if (maquinaria == null || maquinaria.isEmpty()) {
             errores.append("El campo maquinaria es obligatorio.\n");
@@ -338,15 +359,21 @@ public class PrincipalApplication extends Application {
         String operadorNombreCompleto = String.valueOf(txtoperador.getValue());
         if (operadorNombreCompleto == null || operadorNombreCompleto.isEmpty()) {
             errores.append("El campo operador es obligatorio.\n");
+<<<<<<< HEAD
         } else if (!operadorNombreCompleto.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+")) {
             errores.append("El campo operador debe contener solo letras.\n");
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
         }
 
         String horasTrabajo = txthoras_realizar.getText();
         if (horasTrabajo == null || horasTrabajo.isEmpty()) {
             errores.append("El campo horas de trabajo es obligatorio.\n");
+<<<<<<< HEAD
         } else if (!horasTrabajo.matches("[0-9]+")) {
             errores.append("El campo horas de trabajo debe contener solo números.\n");
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
         }
 
         String dni = txtdni.getText();
@@ -357,15 +384,21 @@ public class PrincipalApplication extends Application {
         String usuarioNombreCompleto = txtusuario_registro.getText();
         if (usuarioNombreCompleto == null || usuarioNombreCompleto.isEmpty()) {
             errores.append("El campo usuario es obligatorio.\n");
+<<<<<<< HEAD
         } else if (!usuarioNombreCompleto.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+")) {
             errores.append("El campo usuario debe contener solo letras.\n");
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
         }
 
         String clienteNombreCompleto = txtnombres.getText();
         if (clienteNombreCompleto == null || clienteNombreCompleto.isEmpty()) {
             errores.append("El campo cliente es obligatorio.\n");
+<<<<<<< HEAD
         } else if (!clienteNombreCompleto.matches("[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+")) {
             errores.append("El campo cliente debe contener solo letras.\n");
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
         }
 
         String estado = boxestadoini.getValue();
@@ -390,6 +423,11 @@ public class PrincipalApplication extends Application {
             JOptionPane.showMessageDialog(null, errores.toString(), "Error de validación", JOptionPane.ERROR_MESSAGE);
             return;
         }
+<<<<<<< HEAD
+=======
+
+        // Proceder con la inserción en la base de datos
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
         String sql = "{CALL InsertarRegistroAlquilerMaquinaria(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
 
         try (Connection connection = ConexcionDB.conectar();
@@ -406,9 +444,13 @@ public class PrincipalApplication extends Application {
             statement.setString(10, estado);
             statement.executeUpdate();
             System.out.println("Datos insertados correctamente.");
+<<<<<<< HEAD
             limpiaCampos();
             cargarregistro();
 
+=======
+            cargarregistro();
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Error de base de datos: " + e.getMessage());
@@ -418,6 +460,7 @@ public class PrincipalApplication extends Application {
         }
     }
 
+<<<<<<< HEAD
     private void limpiaCampos() {
         txtelegirmaquinaria.setValue(null);
         txtfechainicio.setValue(null);
@@ -431,6 +474,8 @@ public class PrincipalApplication extends Application {
         txthoras.setText("");
     }
 
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
 
     private void cargarregistro() {
         List<NuevoRegistro> registro = new ArrayList<>();
@@ -463,6 +508,7 @@ public class PrincipalApplication extends Application {
     @FXML
     private void seleccionarregistro() {
         NuevoRegistro registroseleccionar = tablainicio.getSelectionModel().getSelectedItem();
+<<<<<<< HEAD
         if (registroseleccionar!= null &&!registroseleccionar.equals(registroSeleccionadoAnterior)) {
             registroSeleccionadoAnterior = registroseleccionar;
 
@@ -481,6 +527,38 @@ public class PrincipalApplication extends Application {
             txtusuario_registro.setText(registroseleccionar.getUsuarios());
             txthoras_realizar.setText(registroseleccionar.getHorasTrabajo());
             txtdni.setText(registroseleccionar.getDni());
+=======
+        if (registroseleccionar != null && !registroseleccionar.equals(registroSeleccionadoAnterior)) {
+            registroSeleccionadoAnterior = registroseleccionar;
+
+            // Mostrar mensaje de confirmación
+            JOptionPane.showMessageDialog(null, "Registro seleccionado.", "Información", JOptionPane.INFORMATION_MESSAGE);
+
+            if (registroseleccionar.getMaquinariaId() != null) {
+                txtelegirmaquinaria.setValue(registroseleccionar.getMaquinariaId());
+            }
+            if (registroseleccionar.getOperador() != null) {
+                txtoperador.setValue(registroseleccionar.getOperador());
+            }
+            if (registroseleccionar.getEstadoId() != null) {
+                boxestadoini.setValue(registroseleccionar.getEstadoId());
+            }
+            if (registroseleccionar.getFechaInicio() != null) {
+                txtfechainicio.setValue(LocalDate.parse(registroseleccionar.getFechaInicio()));
+            }
+            if (registroseleccionar.getFechaTermino() != null) {
+                txtfechatermino.setValue(LocalDate.parse(registroseleccionar.getFechaTermino()));
+            }
+            if (registroseleccionar.getUsuarios() != null) {
+                txtusuario_registro.setText(registroseleccionar.getUsuarios());
+            }
+            if (registroseleccionar.getHorasTrabajo() != null) {
+                txthoras_realizar.setText(registroseleccionar.getHorasTrabajo());
+            }
+            if (registroseleccionar.getDni() != null) {
+                txtdni.setText(registroseleccionar.getDni());
+            }
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
             txttotal.setText(String.valueOf(registroseleccionar.getTotal()));
             habilitarEdicion(true);
         }
@@ -499,12 +577,20 @@ public class PrincipalApplication extends Application {
     }
 
 
+<<<<<<< HEAD
     private void modificarRegistro(NuevoRegistro nuevoregistro) {
         String sql = "{CALL ActualizarRegistroAlqMaquinaria(?,?,?,?,?,?,?,?,?,?,?)}";
         try (Connection connection = ConexcionDB.conectar();
              CallableStatement statement = connection.prepareCall(sql)) {
 
             // Establecer los parámetros para el procedimiento almacenado
+=======
+
+    private void modificarRegistro(NuevoRegistro nuevoregistro) {
+        String sql = "{CALL ActualizarRegistroAlqMaquinaria(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        try (Connection connection = ConexcionDB.conectar();
+             CallableStatement statement = connection.prepareCall(sql)) {
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
             statement.setInt(1, nuevoregistro.getId());
             statement.setDate(2, java.sql.Date.valueOf(nuevoregistro.getFechaInicio()));
             statement.setDate(3, java.sql.Date.valueOf(nuevoregistro.getFechaTermino()));
@@ -512,11 +598,16 @@ public class PrincipalApplication extends Application {
             statement.setString(5, nuevoregistro.getOperador());
             statement.setBigDecimal(6, new BigDecimal(nuevoregistro.getHorasTrabajo()));
             statement.setString(7, nuevoregistro.getDni());
+<<<<<<< HEAD
             statement.setBigDecimal(8, BigDecimal.valueOf(nuevoregistro.getTotal()));
+=======
+            statement.setBigDecimal(8, new BigDecimal(nuevoregistro.getTotal()));
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
             statement.setString(9, nuevoregistro.getUsuarios());
             statement.setString(10, nuevoregistro.getCliente());
             statement.setString(11, nuevoregistro.getEstadoId());
 
+<<<<<<< HEAD
             // Ejecutar el procedimiento almacenado y verificar el resultado
             int filasAfectadas = statement.executeUpdate();
             if (filasAfectadas > 0) {
@@ -524,11 +615,20 @@ public class PrincipalApplication extends Application {
                 JOptionPane.showMessageDialog(null, "Registro actualizado correctamente.", "Confirmación", JOptionPane.INFORMATION_MESSAGE);
             } else {
                 System.err.println("ERROR: No se pudo actualizar el registro.");
+=======
+            int filasAfectadas = statement.executeUpdate();
+            if (filasAfectadas > 0) {
+                JOptionPane.showMessageDialog(null, "Registro actualizado correctamente.", "Confirmación", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
                 JOptionPane.showMessageDialog(null, "No se pudo actualizar el registro.", "Error", JOptionPane.ERROR_MESSAGE);
             }
         } catch (SQLException e) {
             e.printStackTrace();
+<<<<<<< HEAD
             System.err.println("ERROR SQL al actualizar el registro: " + e.getMessage());
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
             JOptionPane.showMessageDialog(null, "Error al actualizar el registro: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
@@ -537,6 +637,7 @@ public class PrincipalApplication extends Application {
     private void modificarRegistro() {
         NuevoRegistro registroseleccionar = tablainicio.getSelectionModel().getSelectedItem();
         if (registroseleccionar != null) {
+<<<<<<< HEAD
             String maquinariaId = txtelegirmaquinaria.getValue();
             String operador = txtoperador.getValue();
             String estadoId = boxestadoini.getValue();
@@ -566,10 +667,17 @@ public class PrincipalApplication extends Application {
 
             registroseleccionar.setFechaInicio(txtfechainicio.getValue() != null ? txtfechainicio.getValue().toString() : null);
             registroseleccionar.setFechaTermino(txtfechatermino.getValue() != null ? txtfechatermino.getValue().toString() : null);
+=======
+            registroseleccionar.setMaquinariaId(String.valueOf(txtelegirmaquinaria.getSelectionModel().getSelectedItem()));
+            registroseleccionar.setFechaInicio(txtfechainicio.getValue() != null ? txtfechainicio.getValue().toString() : "");
+            registroseleccionar.setFechaTermino(txtfechatermino.getValue() != null ? txtfechatermino.getValue().toString() : "");
+            registroseleccionar.setOperador(String.valueOf(txtoperador.getValue()));
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
             registroseleccionar.setHorasTrabajo(txthoras_realizar.getText());
             registroseleccionar.setDni(txtdni.getText());
             registroseleccionar.setUsuarios(txtusuario_registro.getText());
             registroseleccionar.setCliente(txtnombres.getText());
+<<<<<<< HEAD
 
             try {
                 registroseleccionar.setTotal(Double.parseDouble(txttotal.getText()));
@@ -586,10 +694,25 @@ public class PrincipalApplication extends Application {
             limpiarCampos(); // Limpia los campos después de la modificación
         } else {
             System.err.println("ERROR: No se ha seleccionado ningún registro para modificar.");
+=======
+            registroseleccionar.setEstadoId(String.valueOf(boxestadoini.getValue()));
+            try {
+                registroseleccionar.setTotal(Double.parseDouble(txttotal.getText()));
+            } catch (NumberFormatException e) {
+                System.err.println("Error: el total no es un número válido.");
+                JOptionPane.showMessageDialog(null, "El campo total debe ser un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+            modificarRegistro(registroseleccionar);
+            limpiarCampos();
+            cargarregistro();
+        } else {
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
             JOptionPane.showMessageDialog(null, "No se ha seleccionado ningún registro para modificar.", "Advertencia", JOptionPane.WARNING_MESSAGE);
         }
     }
 
+<<<<<<< HEAD
     private void actualizarComboBoxDespuesModificacion(NuevoRegistro registro) {
         txtelegirmaquinaria.setValue(registro.getMaquinariaId());
         txtoperador.setValue(registro.getOperador());
@@ -607,11 +730,29 @@ public class PrincipalApplication extends Application {
         txtdni.clear();
         txtnombres.clear();
         txttotal.clear();
+=======
+    private void limpiarCampos() {
+        txtfechainicio.setValue(null);
+        txtfechatermino.setValue(null);
+        txthoras_realizar.clear();
+        txtdni.clear();
+        txtnombres.clear();
+        txttotal.clear();
+        txthoras.clear();
+        txtelegirmaquinaria.setValue(null);
+        txtoperador.setValue(null);
+        boxestadoini.setValue(null);
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
     }
 
 
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
 //----------------------------------------------------------------------------------------------------------------------
 
     @FXML
@@ -671,7 +812,10 @@ public class PrincipalApplication extends Application {
             cargoopera.clear();
             sueldoopera.clear();
             cargarOpe();
+<<<<<<< HEAD
             Cargaroperariosini();
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -818,7 +962,10 @@ public class PrincipalApplication extends Application {
             txtdescripcionmaquinaria.clear();
             txtcostoporhora.clear();
             cargarDatos();
+<<<<<<< HEAD
             cargarMaquinarias();
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -836,7 +983,10 @@ public class PrincipalApplication extends Application {
     @FXML
     private TableColumn<Maquinaria, Double> costo_maquina;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
     public void setUsuario(String nombre, String apellido) {
         txtusuario_registro.setText(nombre +" "+ apellido);
 
@@ -845,6 +995,7 @@ public class PrincipalApplication extends Application {
 
 
     public void initialize() {
+<<<<<<< HEAD
         txtdni.textProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue!= null) {
                 if (!newValue.matches("\\d*")) {
@@ -860,6 +1011,8 @@ public class PrincipalApplication extends Application {
 
 
 
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
         cl_maquina.setCellValueFactory(new PropertyValueFactory<>("id"));
         nombre_maquina.setCellValueFactory(new PropertyValueFactory<>("nombre"));
         descripcion_maquina.setCellValueFactory(new PropertyValueFactory<>("descripcion"));
@@ -935,6 +1088,12 @@ public class PrincipalApplication extends Application {
         cargarReportes();
 
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
     }
 
     private void cargarDatos() {
@@ -1035,7 +1194,10 @@ public class PrincipalApplication extends Application {
             txtdireccioncliente.clear();
             txttelefonoliente.clear();
             cargardatosclientes();
+<<<<<<< HEAD
             cargarClientePorDNI();
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -1308,12 +1470,16 @@ public class PrincipalApplication extends Application {
         }
     }
 
+<<<<<<< HEAD
     @FXML
     private Button btn_excel;
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
 
 
     @FXML
     private void ExportButtonAction() {
+<<<<<<< HEAD
 
         FileChooser fileChooser = new FileChooser();
 
@@ -1332,12 +1498,19 @@ public class PrincipalApplication extends Application {
             String filePath = file.getAbsolutePath();
             ExcelExporter.exportToExcel(tabla_reporte, filePath);
         }
+=======
+        String filePath = "C:/Users/josec/Documents/reporte.xlsx";
+        ExcelExporter.exportToExcel(tabla_reporte, filePath);
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
     }
 
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> bc9e71ee4695268a55f19b50d76dbebc2e136741
 }
 
 
