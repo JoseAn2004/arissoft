@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.arissoft.VerificationController">
+   <children>
+      <HBox prefHeight="400.0" prefWidth="351.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="355.0">
+               <children>
+                  <Label fx:id="lblUsuario" alignment="CENTER" prefHeight="42.0" prefWidth="262.0" text="Verificacion Login" textAlignment="CENTER" textFill="#ffbb00">
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Calisto MT Bold Italic" size="28.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="275.0" text="Ingrese el código de verificación de 6 dígitos enviado a su correo electrónico." textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigo" maxWidth="-Infinity" minWidth="160.0" prefHeight="26.0" prefWidth="179.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Button fx:id="btnVerificar" mnemonicParsing="false" prefHeight="20.0" prefWidth="230.0" text="Verificar" onAction="#verificarCodigo">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Yu Gothic UI Regular" size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_ree" alignment="CENTER" mnemonicParsing="false" text="Reenviar codigo">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label fx:id="lblMensaje" alignment="CENTER" prefHeight="50.0" prefWidth="275.0" text="" textAlignment="CENTER" wrapText="true">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Cambria" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

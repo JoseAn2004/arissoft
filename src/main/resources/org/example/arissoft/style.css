@@ -1,0 +1,21 @@
+.custom-button {
+    -fx-background-color: rgba(217, 217, 217, 0.60);
+    -fx-cursor: hand;
+    -fx-background-radius: 30 0 0 30;
+    -fx-selection-color: yellow; /* Se agrega la propiedad */
+}
+
+.custom-button:hover,
+.custom-button:selected,
+.custom-button:armed,
+.custom-button:focused {
+    -fx-background-color: yellow;
+}
+
+.custom-button:disabled {
+    -fx-background-color: rgba(217, 217, 217, 0.60);
+}
+
+.tab-pane > .tab {
+    -fx-focus-color: transparent; /* Prevent tab from stealing focus */
+}
